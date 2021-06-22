@@ -98,6 +98,9 @@ public class Menu {
 					this.commands.clear();
 				}
 				break;
+			case "exit":
+				System.exit(0);
+				//break;   --> unreachable code ... 
 			default:
 				String temp = cmd;
 				displayException("'" + temp + "' is not recognized as an internal or external command,\r\n"

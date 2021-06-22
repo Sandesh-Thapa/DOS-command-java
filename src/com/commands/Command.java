@@ -42,7 +42,7 @@ public class Command {
 		if (this.commands.size() == 1) {
 			return this.mainPath;
 		} else if (this.commands.size() == 2) {
-			if (this.commands.get(1) == "..") {
+			if (this.commands.get(1).equals("..")) {
 				String trimPath = "";
 				for (int i = this.mainPath.length() - 1; i >= 0; i--) {
 					if (this.mainPath.charAt(i) == '\\') {
@@ -53,7 +53,7 @@ public class Command {
 					}
 				}
 
-				for (int j = 0; j <= (this.mainPath.length() - trimPath.length()) - 3; j++) {
+				for (int j = 0; j <= (this.mainPath.length() - trimPath.length() -1); j++) {
 					newPath += this.mainPath.charAt(j);
 				}
 				return newPath;
